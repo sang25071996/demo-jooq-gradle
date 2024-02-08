@@ -1,0 +1,2 @@
+rootProject.name = 'demo-jooq-project'
+include 'domains'

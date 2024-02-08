@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/breathout-tai?useSSL=false
+    password: 123456
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/breathout-tai
+    user: postgres
+    password: 123456
+    locations: classpath:migration/*.sql
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://securetoken.google.com/fir-project-sang
+          jwk-set-uri: https://www.googleapis.com/robot/v1/metadata/jwk/securetoken@system.gserviceaccount.com
+swagger-ui:
+  server:
+    url: 'http://localhost:8080/'

@@ -1,0 +1,12 @@
+
+spring:
+  profiles:
+    active: local
+logging:
+  level:
+    com.breatheout: DEBUG
+    org:
+      jooq:
+        tools:
+          LoggerListener: DEBUG
+firebase-key: classpath:firebase.json
